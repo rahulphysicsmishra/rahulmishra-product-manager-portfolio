@@ -1,0 +1,351 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    color: #555; /* Ensure contrast between background and text */
+    margin: 10px 0px 20px 0px; /* Adds space above and below */
+    text-align: center; /* Center align the text */
+}
+
+/* Header & Navigation */
+header {
+    background-color: #00796b;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #d32f2f;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1458668383970-8ddd3927deed?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0px 10px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;     /* Center align the items in the column */
+    text-align: center;
+    max-width: 800px;  
+    width: 100%;;    /* Center the text */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #00796b
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 150px; /* Adjust this for desired image size on small screens */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Space between paragraph and image */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* View My Project Button */
+.cta-button {
+    margin-top: 20px; /* Adds spacing below the image */
+    padding: 10px 20px;
+    background-color: #00796b; /* Button color */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #004d40; /* Darker button color on hover */
+}
+
+/* Make the image responsive for larger screens */
+@media (min-width: 768px) {
+    .hero-image {
+        width: 350px; /* Larger size on bigger screens */
+        height: 350px;
+    }
+    .hero h1 {
+        font-size: 3.5rem; /* Bigger text on larger screens */
+    }
+
+    .hero p {
+        font-size: 1.5rem; /* Slightly bigger text for description */
+    }
+}
+
+/* About Me Section */
+.about {
+    padding: 50px 20px;
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+/* Skills Section */
+/* Skills Section */
+.skills {
+    padding: 60px 20px;
+    background-color: #f5f5f5; /* Light background for improved contrast */
+    text-align: center; /* Center-aligns section title */
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 1.2px; /* Adds subtle spacing to the title */
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+    gap: 30px; /* Adds space between skill cards */
+}
+
+.skill-card {
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text for contrast */
+    padding: 30px;
+    border-radius: 15px;
+    width: 280px; /* Slightly wider */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+    cursor: pointer; /* Indicates interactivity */
+}
+
+.skill-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    background-color: #e0f7fa; /* Slight color change on hover */
+}
+
+.skill-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #00796b; /* Teal color for headers */
+}
+
+.skill-card p {
+    font-size: 1.1rem;
+    line-height: 1.8; /* Improves readability */
+    color: #666; /* Softer text color */
+}
+
+@media screen and (max-width: 768px) {
+    .skill-card {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0 0 20px 0;
+    }
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 50px 20px;
+    background-color: #e0f7fa;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 2px solid #00796b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: #e0f2f1;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #005f51;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+.services p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+
+}
+
+.services ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.services li {
+    margin: 10px 0;
+    padding: 20px;
+    position: relative;
+}
+
+.services li:hover {
+    background-color: #00796b;
+    color: #ffffff;
+}
+
+* Adding more space below the last list item */
+.services li:last-child {
+    margin-bottom: 10px; /* Adjust this value for the space you want */
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 8px 20px;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #004d40; /* Darker shade on hover */
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #00796b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background-color: #004d40;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #00796b;
+    text-align: center;
+    color: #fff;
+}
