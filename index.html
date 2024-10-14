@@ -26,6 +26,7 @@
         <div class="hero-content">
             <h1>Hi, I'm Rahul Mishra</h1>
             <p>Product Manager | Frontend Developer | Yoga Enthusiast</p>
+            <img src="images/mypic.jpeg" alt="Rahul Mishra" class="hero-image">
             <a href="#projects" class="cta-button">View My Projects</a>
         </div>
     </section>
@@ -33,7 +34,21 @@
     <!-- About Me Section -->
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>Short bio here... Your journey in tech, product management, and your passion for wellness in the tech industry.</p>
+        <p style="font-size: 1.2rem; color: #333; line-height: 1.6; text-align: justify; max-width: 900px; margin: 0 auto;">
+            Hi, I'm Rahul Mishra – Product Manager, Frontend Developer, and Yoga Enthusiast. 
+            With over 3 years of experience as a core member at CloudyML, I’ve had the unique 
+            opportunity to work across multiple domains, driving growth and building impactful products. 
+            I'm passionate about merging tech with wellness to foster healthier work environments, 
+            and through my journey, I've helped teams and users achieve more with seamless tech solutions.
+        </p>
+        <ul style="font-size: 1.1rem; color: #333; line-height: 1.8; max-width: 900px; margin: 20px auto; list-style-type: disc; padding-left: 20px;">
+            <li>Developed accessible data science courses alongside the technical team.</li>
+            <li>Supported sales teams in addressing technical queries to enhance product understanding.</li>
+            <li>Collaborated with SEO and marketing teams to increase website ranking and reach.</li>
+            <li>Managed 25+ technical experts and worked on app/web improvements.</li>
+            <li>Assisted the development team in building the app, web application, and CRM for our internal team.</li>
+            <li>Resolved user feedback to ensure an exceptional platform experience.</li>
+        </ul>
     </section>
 
     <!-- Skills Section -->
@@ -42,15 +57,15 @@
         <div class="skills-container">
             <div class="skill-card">
                 <h3>Product Management</h3>
-                <p>Explain your PM skills, tools, and experience.</p>
+                <p>Agile Methodologies, Product Roadmap Planning, A/B Testing, User Research, Stakeholder Management, Data-Driven Decision Making, Jira, Trello, and Confluence.</p>
             </div>
             <div class="skill-card">
                 <h3>Frontend Development</h3>
-                <p>Describe your development expertise, frameworks, and languages.</p>
+                <p>HTML5, CSS3, JavaScript, React.js, Bootstrap, Responsive Web Design, Version Control (Git), Web Performance Optimization, and Cross-Browser Compatibility.</p>
             </div>
             <div class="skill-card">
                 <h3>Yoga & Wellness</h3>
-                <p>Highlight your yoga experience and how it enhances your productivity.</p>
+                <p>Certified in Ashtanga Yoga, Hatha, Vinyasa, and Kundalini forms. Specializing in Pranayama, meditation techniques, and stress management practices to enhance well-being and productivity.</p>
             </div>
         </div>
     </section>
@@ -61,11 +76,17 @@
         <div class="projects-container">
             <!-- Project 1 -->
             <div class="project-card">
-                <h3>Project Name</h3>
-                <p>Short description of the project.</p>
-                <a href="#" class="project-link">View Project</a>
+                <h3>Rock, Paper, Scissors Game 🎮</h3>
+                <p>A fun, interactive game where you compete against the computer in 60-second rounds. Score is tracked, and the result is displayed instantly!</p>
+                <a href="https://github.com/rahulphysicsmishra/Stone-paper-Scissor-Game" class="project-link" target="_blank">View Project</a>
             </div>
-
+            
+            <div class="project-card">
+                <h3>Memory Game 🎮</h3>
+                <p>A fun and challenging game where players flip cards to match pairs, with three exciting themes: Food, Animals, and Nature. Test your memory skills!</p>
+                <a href="https://github.com/rahulphysicsmishra/Theme-Based-Memory-Game-" class="project-link" target="_blank">View Project</a>
+            </div>
+            
             <!-- Add more projects as needed -->
         </div>
     </section>
@@ -73,17 +94,49 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <h2>Services</h2>
-        <p>Outline your consulting services, product management guidance, etc.</p>
+        <p>Offering expert consulting in product management and team building, enhanced by my passion for yoga and meditation.</p>
+
+        <ul>
+            <li>
+                <span class="icon">🛠️</span> 
+                <strong>Product Management Guidance</strong>: 
+                I provide insights on product lifecycle management, from ideation to launch, ensuring your product meets market needs effectively.
+            </li>
+            <li>
+                <span class="icon">🤝</span> 
+                <strong>Team Building Workshops</strong>: 
+                Engage your team with workshops that foster collaboration, creativity, and communication, enhancing overall productivity.
+            </li>
+            <li>
+                <span class="icon">🧘‍♂️</span> 
+                <strong>Yoga and Meditation Sessions</strong>: 
+                Integrate wellness into your workspace through tailored yoga and meditation sessions designed to reduce stress and increase focus.
+            </li>
+            <li>
+                <span class="icon">📊</span> 
+                <strong>Data-Driven Strategy Development</strong>: 
+                Leverage data analytics to inform decision-making, optimize processes, and drive business growth through strategic planning.
+            </li>
+        </ul>
         <a href="#contact" class="cta-button">Contact Me</a>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <form action="#" method="POST">
+        <form name="contact" action="#" method="POST" netlify>
+            <!--Hidden input field for form name-->
+            <input type="hidden" name="form-name" value="contact">
+
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
+
+            <!--Anti-spam honeypot-->
+            <p style="display: none;">
+                <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
             <button type="submit">Send Message</button>
         </form>
     </section>

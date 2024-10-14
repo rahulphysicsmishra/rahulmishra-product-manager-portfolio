@@ -246,6 +246,7 @@ header {
     padding: 50px 20px;
     background: linear-gradient(to right, #e0f7fa, #ffffff);
     text-align: center;
+    position: relative;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     
@@ -293,6 +294,7 @@ header {
 }
 
 .cta-button {
+    display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
     background-color: #00796b;
@@ -301,12 +303,29 @@ header {
     border-radius: 5px;
     font-size: 1.2rem;
     transition: background 0.3s ease;
+    position: relative;
+}
+
+/* Keep the button centered */
+.cta-button {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    width: fit-content; /* Makes sure button only takes necessary width */
+    margin-left: auto; /* Centering the button */
+    margin-right: auto; /* Centering the button */
+    text-align: center;
 }
 
 .cta-button:hover {
     background-color: #004d40; /* Darker shade on hover */
 }
 
+.services-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: left;
+}
 
 /* Contact Section */
 .contact {
