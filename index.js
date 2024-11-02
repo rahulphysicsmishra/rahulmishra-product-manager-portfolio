@@ -47,4 +47,33 @@ function rotateTaglines() {
     setInterval(changeTagline, 3500); // 3500ms = 3.5 seconds for smooth transitions
 }
 
+document.getElementById('recommendationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    //get form data
+    const name = event.target.name.value;
+    const company = event.target.company.value;
+    const role = event.target.role.value;
+    const profile = event.target.profile.value;
+    const recommendation = event.target.recommendation.value;
+
+    //create a new recommendation card
+    const newRecommendation = document.createElement('div');
+    newRecommendation.classList.add('recommendation-card');
+    newRecommendation.innerHTML = `<p><strong><a href="${profile}" target="_blank">${name}</a></strong>, ${role} at ${company}</p>
+    <p>${recommendation}</p>`;
+
+    //append new recommendation to the list
+    document.getElementById('recommendationsList').appendChild(newRecommendation);
+
+    //show thank you message
+    document.getElementById('thanksMessage').style.display = 'block';
+
+    //clear form fields
+    event.target.reset();
+
+    //hide thank you after few seconds
+    setTimeout(() => {
+        document.getElementById('thanksMessage').style.display ='none';
+    }, 3000);
+});

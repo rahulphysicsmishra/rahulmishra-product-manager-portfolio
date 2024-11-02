@@ -17,6 +17,8 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#recommendation">Recommendations</a></li>
+
             </ul>
         </nav>
     </header>
@@ -42,11 +44,11 @@
             and through my journey, I've helped teams and users achieve more with seamless tech solutions.
         </p>
         <ul style="font-size: 1.1rem; color: #333; line-height: 1.8; max-width: 900px; margin: 20px auto; list-style-type: disc; padding-left: 20px;">
+            <li>Assisted the development team in building the app, web application, and CRM for our internal team.</li>
+            <li>Managed 25+ technical experts and worked on app/web improvements.</li>
             <li>Developed accessible data science courses alongside the technical team.</li>
             <li>Supported sales teams in addressing technical queries to enhance product understanding.</li>
             <li>Collaborated with SEO and marketing teams to increase website ranking and reach.</li>
-            <li>Managed 25+ technical experts and worked on app/web improvements.</li>
-            <li>Assisted the development team in building the app, web application, and CRM for our internal team.</li>
             <li>Resolved user feedback to ensure an exceptional platform experience.</li>
         </ul>
     </section>
@@ -60,19 +62,19 @@
                 <p>Agile Methodologies, Product Roadmap Planning, A/B Testing, User Research, Stakeholder Management, Data-Driven Decision Making, Jira, Trello, and Confluence.</p>
             </div>
             <div class="skill-card">
-                <h3>Frontend Development</h3>
-                <p>HTML5, CSS3, JavaScript, React.js, Bootstrap, Responsive Web Design, Version Control (Git), Web Performance Optimization, and Cross-Browser Compatibility.</p>
+                <h3>Frontend & Backend Development</h3>
+                <p>Proficient in Python, Django, HTML5, CSS3, JavaScript, React.js, Bootstrap, Responsive Web Design, Version Control (Git), SQL (relational databases), Working with APIs, Web Performance Optimization, and Cross-Browser Compatibility.</p>
             </div>
             <div class="skill-card">
-                <h3>Yoga & Wellness</h3>
-                <p>Certified in Ashtanga Yoga, Hatha, Vinyasa, and Kundalini forms. Specializing in Pranayama, meditation techniques, and stress management practices to enhance well-being and productivity.</p>
+                <h3>Data Science & AI</h3>
+                <p>Skilled in Machine Learning, Deep Learning, NLP, and Prompt Engineering, with expertise in leveraging AI tools for innovative solutions.</p>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2>My Projects</h2>
+        <h2 class="myProjects">My Projects</h2>
         <div class="projects-container">
             <!-- Project 1 -->
             <div class="project-card">
@@ -90,6 +92,47 @@
             <!-- Add more projects as needed -->
         </div>
     </section>
+
+    <!--Interest and achievement section-->
+    <section class="interests-achievements">
+        <div class="interests-achievements">
+            <h2>Interests & Achievements</h2>
+            <div class="achievement-container">
+                
+                <div class="achievement-card">
+                    <h3>Stock Investment Enthusiasm</h3>
+                    <p>Passionate about tracking companies, trends, and market strategies to make informed investment decisions.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Coding Practice</h3>
+                    <p>Solving DSA problems on CodeChef to sharpen problem-solving skills. Currently at 3 star rating.</p>
+                    <a href="https://www.codechef.com/users/glad_card_42" target="_blank">
+                        <img src="images/codechef.png" alt="CodeChef Logo" class="codechef-logo">
+                    </a>
+
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Certifications</h3>
+                    <p>Completed various courses from Coursera in AI, Data Science, Product Management, currently upskilling in Frontend & Backend Development.</p>
+                    <a href="https://www.coursera.org/learner/yogiii-rahul" target="_blank">
+                        <img src="images/coursera.svg" alt="Coursera Logo" class="coursera-logo">
+                    </a>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Yoga & Wellness</h3>
+                    <p>Certified in yoga with a gold medal in wellness practices for holistic health and stress management.</p>
+                    <a href="https://www.instagram.com/yogiii_rahul" target="_blank">
+                        <img src="images/insta.jpeg" alt="Insta Logo" class="instagram-logo">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>    
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -121,6 +164,25 @@
         <a href="#contact" class="cta-button">Contact Me</a>
     </section>
     
+    <!--Taking a recommendation-->
+    <section id="recommendation" class="recommendation">
+        <h2 class="leaveRecommendation">Leave a Recommendation</h2>
+        <form id="recommendationForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="company" placeholder="Company" required>
+            <input type="text" name="role" placeholder="Your Role" required>
+            <input type="url" name="profile" placeholder="Linkedin/X Profile URL" required>
+            <textarea name="recommendation" placeholder="Your Recommendation" required></textarea>
+            <button type="submit">Submit Recommendation</button>
+        </form>
+        <p id="thanksMessage" style="display: none;">Thanks for leaving a recommendation!</p>
+    </section>
+
+    <!--Display Recommendation-->
+    <section id="recommendationsDisplay" class="recommendations-display">
+        <h2>Recommendations</h2>
+        <div id="recommendationsList" class="recommendations-list"></div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -142,7 +204,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 [Your Name] - All rights reserved.</p>
+        <p>&copy; 2024 Rahul Mishra - All rights reserved.</p>
     </footer>
 <script src="index.js"></script>
 </body>
